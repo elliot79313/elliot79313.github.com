@@ -73,6 +73,9 @@ var Youtube = function(){
 			 .success(function(resp){
 				 playPtr = 0;
 				 playlistPtr = 0;
+				 for (var x= 0 ;x < 4;x ++)
+				 	$("object")[x].stopVideo();
+				 
 				 queue = resp["feed"]["entry"];
 				 $("#queue ul").html("");
 				 $.map(queue,addElement);
