@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Youtube 3D Player</title>
+<meta property="og:title" content="Youtube 3D Player" />
+<meta property="og:type" content="video" />
+<meta property="og:url" content="http://elliot79313.github.com/ntuwebhack1/index.html" />
+<meta property="og:image" content="https://github.com/fluidicon.png" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="Stylesheet" type="text/css" href="./css/reset.css" />
+<link rel="Stylesheet" type="text/css" href="./css/index.css" />
+<link rel="Stylesheet" type="text/css" href="./css/bootstrap.min.css" />
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+<script type="text/javascript" src="./js/index.js"></script>
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+</head>
+<body>
+<div id="inframe">
+	<div id="leftbar">
+    	
+        <div id="playerlist">
+			<span id="header"><img src="http://www.cliparchiver.com/wp-content/uploads/logo_youtube_16x16.png"/>Youtube 3D Player</span>
+            <div style=" margin-top:20px; margin-left:0px;">
+            <h6 style=" margin-left:20px;">Youtube playlist Link</h6>
+            <input type="text" style="width:283px;" id="playlisttext" value="" />
+            </div>
+            <div id="queue">
+            	<ul>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Felliot79313.github.com%2Fntuwebhack1%2Findex.html&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=true&amp;font&amp;colorscheme=light&amp;action=like&amp;height=80&amp;appId=358181217571865" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px; position:fixed; top:15px; left:360px;" allowTransparency="true"></iframe>
+    <div id="fixedPlayerController">
+    	<div id="prev" style=" display:inline-block;"><img src="./images/player_start.png"/></div>
+        <div id="play" style=" display:inline-block;"><img src="./images/player_pause.png"/></div>
+        <div id="next" style=" display:inline-block;"><img src="./images/player_end.png"/></div>
+        <div id="timestatus"style="display:inline-block;width:220px; height:40px;" >
+        	<div class="progress-bar blue stripes" style="top:6px;">
+        	<span style="width: 0%"></span>
+            <label class="value">0%</label>
+            </div>
+       	</div>
+        <div id="range" style="display:inline-block;"><img src="./images/volume.png"/><input style="width:130px" type="range" name="points" min="0" max="100" value="20"></div>
+    </div>
+    <div id="experiment">
+        <div id="cube">
+            <div class="face one">
+                 1
+            </div>
+            <div class="face two">
+            	<div class="face_containter">
+                	<div id="ytapiplayer0" class="ytplayer">
+    					You need Flash player 8+ and JavaScript enabled to view this video.
+ 					</div>
+                </div>
+            </div>
+            <div class="face three">
+                <div class="face_containter">
+                	<div id="ytapiplayer1" class="ytplayer">
+    					You need Flash player 8+ and JavaScript enabled to view this video.
+ 					</div>
+                </div>
+            </div>
+            <div class="face four">
+                <div class="face_containter">
+                	<div id="ytapiplayer2" class="ytplayer">
+    					You need Flash player 8+ and JavaScript enabled to view this video.
+ 					</div>
+                </div>
+            </div>
+            <div class="face five">
+                <div class="face_containter">
+                	<div id="ytapiplayer3" class="ytplayer">
+    					You need Flash player 8+ and JavaScript enabled to view this video.
+ 					</div>
+                </div>
+            </div>
+            <div class="face six">
+                    6
+            </div>
+        </div>
+    </div>
+    <div id="footer">National Taiwan University Web Programming Hack Day #1<br />Author: Shih-En Chou</div>
+</div>
+</body>
+</html>
