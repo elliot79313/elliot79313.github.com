@@ -1,4 +1,4 @@
-// JavaScript Document
+ // JavaScript Document
 var g_youtube;
 (function($){
   $(document).ready(function(){
