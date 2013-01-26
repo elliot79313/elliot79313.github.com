@@ -82,7 +82,7 @@ var Youtube = function(){
 			});
 			
 		});
-		$("#playlisttext").val("http://www.youtube.com/watch?v=heF9OSHZ4tY&list=PL7ACC58155086E693").trigger("keyup");
+		$("#playlisttext").val("http://www.youtube.com/watch?v=Ds5vPNOD_fo&list=PLYEmaHOlGAmtKgUVpnKnsdnM8Ny-9ZnjM").trigger("keyup");
 		$("#prev").bind("click",function(){
 			$("body").trigger("playerleft");
 			$("#myytplayer" + playPtr).trigger("prevVideo");
