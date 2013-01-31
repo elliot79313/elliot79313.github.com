@@ -110,8 +110,8 @@ var Analysis = function(data){
 	 $.map(data, function(elem){
 		 FB.api({ method: 'groups.getMembers', gid: elem["id"]}, function (result){
 			 requestCount ++;
-			 $(".progress-bar span").css("width",requestCount*100/data["length"]+"%");
-			 $(".progress-bar label").html(requestCount*100/data["length"]+"%");
+			 $(".progress-bar span").css("width",parseInt(requestCount*100/data["length"])+"%");
+			 $(".progress-bar label").html(parseInt(requestCount*100/data["length"])+"%");
 			 for(var x = 0; x < result.members.length;x++){
 				 if( MemberHash[result.members[x]] == null){
 					 MemberHash[result.members[x]]= [elem["id"]];
