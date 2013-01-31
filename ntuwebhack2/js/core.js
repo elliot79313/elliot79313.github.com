@@ -140,7 +140,7 @@ var DisplayData = function(){
 		if(a["size"].length == b["size"].length) return 0;
 		return -1;
 	});
-	var topData = manager.slice(0,60);
+	var topData = manager.slice(0,120);
 	var friendsData = g_param["user"].getFriend();
 	
 	$("#userlist").html("");
