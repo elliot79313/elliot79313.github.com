@@ -1,0 +1,76 @@
+@charset "UTF-8";
+/* CSS Document */
+@media (min-width: 979px) {
+body{ padding-top:60px;}
+}
+@media (max-width: 979px) {
+body{ padding-top:0px;}
+}
+#login{ display:none;}
+.status {display:none; color:#FFF;}
+.status a { color:#FF6;}
+.well{padding: 19px 5px;}
+.groupset li.groupitem {white-space:nowrap;padding:3px 0px; overflow:hidden; } 
+.groupset li.groupitem a {display: inline-block; margin-left:0px;overflow:hidden;text-overflow: ellipsis;width: 100%;}
+.groupset li.groupitem img { display:inline-block;} 
+.groupset li.groupitem img { }
+.groupset li.groupitem:hover img { display:inline-block;} 
+ #myModal .groupset img { margin-right:10px;}
+.progress-bar {
+background-color: #1a1a1a;
+height: 20px;
+padding: 3px;
+width: 100%;
+margin: 0px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+-moz-box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+-webkit-box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+position:relative;
+}
+.progress-bar label.value{ color:#FFF; font-size:12px; position:absolute; top:3px; right:6px;}
+.progress-bar span {
+display: inline-block;
+height: 100%;
+background-color: #777;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+-webkit-transition: width .4s ease-in-out;
+-moz-transition: width .4s ease-in-out;
+-ms-transition: width .4s ease-in-out;
+-o-transition: width .4s ease-in-out;
+transition: width .4s ease-in-out;
+}
+.blue span {
+background-color: #34c2e3;
+}
+.stripes span {
+-webkit-background-size: 30px 30px;
+-moz-background-size: 30px 30px;
+background-size: 30px 30px;
+background-image: -webkit-gradient(linear, left top, right bottom, color-stop(.25, rgba(255, 255, 255, .15)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .15)), color-stop(.75, rgba(255, 255, 255, .15)), color-stop(.75, transparent), to(transparent));
+background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+background-image: -moz-linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+background-image: -ms-linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+background-image: -o-linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+-webkit-animation: animate-stripes 3s linear infinite;
+-moz-animation: animate-stripes 3s linear infinite;
+}
+#userlist { border:1px solid #888; border-radius:5px; padding:0px 10px; width:340px;float: left;}
+#userlist > div { border-top:1px solid #555;padding:3px 0px;position:relative }
+#userlist > div:first-child { border-top:0px;;}
+#userlist img {width:40px; height:40px; margin-right: 5px;vertical-align: -24px;}
+#userlist span.count { float:right;margin-top:10px; margin-right:20px; }
+#userlist > div .more { background:#FFF; border:1px solid #333; position:absolute; right:-10px; bottom:-1px; height:100%;width:20px;text-align: center; }
+#userlist > div .more i { margin-top:12px;}
+#userlist > div:first-child .more {border-radius:0px 5px 0px 0px;}
+.addfriend { height: 19px;font-size: 12px; position:absolute; bottom:0px; right:60px;}
+.addfriend a { float:right; }
+#statusMsg { position:fixed; top:0px; width:200px; left:50%; margin-left:-100px; background-color:#690; color:#FFF;padding:5px 0px; text-align:center; display:none;z-index: 1050;}
