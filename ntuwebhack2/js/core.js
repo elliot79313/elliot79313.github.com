@@ -43,6 +43,7 @@ $(document).ready(function(){
 });
 var User = function(){
 	var name = null;
+	var uid = null;
 	var friends = [];
 	$("#statusMsg").show().html("使用者認證中");
 	$("#logout").show();
@@ -50,15 +51,20 @@ var User = function(){
 	FB.api("/me?fields=id,name,friends",function(response){
 		$(".status a").html(response["name"]);
 		$(".status").show();
+		uid = response["id"];
 		friends = $.map(response["friends"]["data"],function(elem){
 			return elem["id"];
 		});
 		GetGroup({"name": response["name"], "uid":response["id"] });
 		$("#statusMsg").show().html("登入成功!");
+		_gaq.push(['_trackEvent', 'login', response["id"] +"" ]);
 	});
 	PageSetting();
 	this.getFriend = function(){
 		return friends;	
+	};
+	this.getUID = function(){
+		return uid;	
 	};
 };
 var PageSetting = function(){
@@ -83,13 +89,14 @@ var GetGroup = function(user){
 			if(a["name"] == b["name"]) return 0;
 			return -1;
 		});
-		data = data.slice(0,100);
+		//data = data.slice(0,100);
 		$.map(data,function(elem){
-			var $li =  $("<li class='groupitem'><img src='"+ elem["icon"] +"'><a href='#'>"+elem["name"]+"</a></li>");
+			var $li =  $("<li class='groupitem'><img src='"+ elem["icon"] +"'><a target='_blank' href='https://www.facebook.com/"+elem["id"] +"'>"+elem["name"]+"</a></li>");
 			$li.data("id",elem["id"]);
 			$("#groupset").append($li);
 		});
 		Analysis(data);
+		_gaq.push(['_trackEvent', 'GroupSize', user["uid"]+"",data.length  ]);
 	});
 };
 var MemberHash = {};
@@ -205,6 +212,7 @@ var DisplayData = function(){
 							$li.data("id",item["id"]);
 							$("#myModal .groupset:eq(1)").append($li);
 						});
+						_gaq.push(['_trackEvent', 'Read', g_param["user"].getUID() +"", elem["uid"]  ]);
 						}catch(ex){
 						}
 					});
