@@ -168,7 +168,7 @@ var DisplayData = function(){
 			};
 			$(".more", template).click(function(){
 					$('#myModal').modal('show');
-					$("#myModal #myModalLabel").html("").append("與","<span class='text-success'>"+response["name"] +"</span>","共同的社團, 還有他所加入的社團");
+					$("#myModal #myModalLabel").html("").append("與","<span class='text-success'>"+response["name"] +"</span>","共同的社團, 還有他加入的社團");
 					$("#myModal .groupset").html("");
 					
 					var groupData = g_param["group"];
