@@ -36,6 +36,7 @@ $(document).ready(function(){
 			$("#userlist").html("");
 			$(".progress-bar span").css("width","0%");
 			$(".progress-bar label").html("0%");
+			_gaq.push(['_trackEvent', 'logout', g_param["user"].getUID() +""  ]);
 		})
 		e.preventDefault();
 	});
